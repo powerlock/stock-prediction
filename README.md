@@ -1,4 +1,4 @@
-# stock-prediction
+# Stock prediction with prophet and yahoo finance
 1. Use prophet model for stock prediction.
 2. Use Yahoo finanace to download data.
 3. Deploy the model on EC2.
