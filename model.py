@@ -28,7 +28,7 @@ def train(ticker="TSLA"):
     joblib.dump(model, Path(BASE_DIR).joinpath(f"{ticker}.joblib"))
 
 
-def predict(ticker="MSFT", days=7):
+def predict(ticker="TSLA", days=7):
     model_file = Path(BASE_DIR).joinpath(f"{ticker}.joblib")
     if not model_file.exists():
         return False
@@ -55,13 +55,13 @@ def convert(prediction_list):
     return output
 
 
-#if __name__ == "__main__":
- #   parser = argparse.ArgumentParser(description='Predict')
- #   parser.add_argument('--ticker', type=str, default='MSFT', help='Stock Ticker')
- #   parser.add_argument('--days', type=int, default=7, help='Number of days to predict')
- #   args = parser.parse_args()
+# if __name__ == "__main__":
+#     parser = argparse.ArgumentParser(description='Predict')
+#     parser.add_argument('--ticker', type=str, default='TSLA', help='Stock Ticker')
+#     parser.add_argument('--days', type=int, default=7, help='Number of days to predict')
+#     args = parser.parse_args()
     
- #  train(args.ticker)
-#  prediction_list = predict(ticker=args.ticker, days=args.days)
- #   output = convert(prediction_list)
-  #  print(output)
+#     train(args.ticker)
+#     prediction_list = predict(ticker=args.ticker, days=args.days)
+#     output = convert(prediction_list)
+#     print(output)
