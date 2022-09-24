@@ -3,9 +3,23 @@
 - Develop a RESTful API with FastAPI
 - Build a basic time series model to predict stock prices
 - Deploy a FastAPI to AWS EC2
+=======
+## Run FASTAPI on local:
+uvicorn main:app --reload --workers 1 --host 0.0.0.0 --port 8000
+
+## Steps:
+1. Create a vir. env. with requirements.
+2. pretrain the model by running python model.py
+3. Run main.py with uvicorn
+uvicorn main:app --reload --workers 1 --host 0.0.0.0 --port 8000
+4. Do the prediction.
+
+## Stock prediction and deployment on AWS
+
+
 
 # Stock Prophet 
-Today, we will be **deploying** a stock prediction model as a RESTful API using [FastAPI](https://fastapi.tiangolo.com/) to AWS EC2, and make it available (i.e., public) to end users. Less focus is put on how well the model performs, yet the goal is to get an initial working system quickly into production:
+In this project, we will be **deploying** a stock prediction model as a RESTful API using [FastAPI](https://fastapi.tiangolo.com/) to AWS EC2, and make it available (i.e., public) to end users. Less focus is put on how well the model performs, yet the goal is to get an initial working system quickly into production:
     
     data -> model -> API -> deployment
 
