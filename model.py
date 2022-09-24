@@ -59,7 +59,7 @@ def convert(prediction_list):
         output[date] = data["trend"]
     return output
 
-if __name__ == "__main__":
+""" if __name__ == "__main__":
     stlist = ['SQ','AZO','TSLA','MSFT','ROKU','NFLX','TXG','ENVX']
     #stlist = ['SQ','NFLX','TSLA']
     #stlist = ['ADBE','ZM','COST','CRM']
@@ -80,7 +80,7 @@ if __name__ == "__main__":
         val = (data.y.iloc[-1] - next(iter(output.values())))/data.y.iloc[-1]
         print("change percentage: ", 100*val)
         if abs(val) > 0.15:
-            print("****************5 percent more increase, High chance to invest*************")
+            print("****************5 percent more increase, High chance to invest*************") """
 
 
 
