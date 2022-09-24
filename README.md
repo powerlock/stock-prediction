@@ -11,3 +11,6 @@ Use this curl command to get the prediction:
     --request POST \
     --data '{"ticker":"MSFT", "days":7}' \
     http://54.193.94.113:8000/predict
+
+2. run the uvicorn command:
+`uvicorn main:app --reload --workers 1 --host 0.0.0.0 --port 8000`
