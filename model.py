@@ -1,6 +1,6 @@
 import datetime
 from pathlib import Path
-
+import csv
 import joblib
 import pandas as pd
 import yfinance as yf
@@ -30,6 +30,15 @@ def train(ticker="TSLA"):
     #print(df_p.head())
 
     joblib.dump(model, Path(str(BASE_DIR)+'/model').joinpath(f"{ticker}.joblib"))
+    update_data = df_forecast.y.iloc[-1]
+    filed_names = ['Symbol','Price']
+    dict_f = {'Symbol':ticker,"Price":update_data}
+
+    with open(str(BASE_DIR)+'/data/current.csv', 'a') as csv_file:
+        writer = csv.DictWriter(csv_file, fieldnames=filed_names)
+        writer.writerow(dict_f)
+    csv_file.close()
+    
     return df_forecast
 
 
@@ -61,10 +70,10 @@ def convert(prediction_list):
 
 """ if __name__ == "__main__":
     stlist = ['SQ','AZO','TSLA','MSFT','ROKU','NFLX','TXG','ENVX']
-    #stlist = ['SQ','NFLX','TSLA']
+    stlist = ['SQ','NFLX','TSLA']
     #stlist = ['ADBE','ZM','COST','CRM']
     #stlist = ['AI', 'NKLA','OXY','USO', 'XL']
-
+    #stlist = ['XL']
     for t in stlist:
 
         parser = argparse.ArgumentParser(description='Predict')

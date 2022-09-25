@@ -30,6 +30,22 @@ def get_prediction(payload: StockIn):
         "forecast": convert(prediction_list)}
     return response_object
 
+<<<<<<< HEAD
+""" 
+from auto_run import *
+if __name__ == "__main__":
+#    uvicorn.run(app, host="0.0.0.0", port=8000)
+    for st in stlist:
+        data = yf.download(st, TODAY.strftime("%Y-%m-%d"), TODAY.strftime("%Y-%m-%d"))
+        prediction_list = predict(ticker=args.ticker, days=args.days)
+        output = convert(prediction_list)
+        print(output)
+        val = (data.y.iloc[-1] - next(iter(output.values())))/data.y.iloc[-1]
+        print("change percentage: ", 100*val)
+        if abs(val) > 0.15:
+            print("****************5 percent more increase, High chance to invest*************") """
+=======
 #@app.get("/health", response_model=StockOut, status_code=200)
 #if __name__ == "__main__":
 #    uvicorn.run(app, host="0.0.0.0", port=8000)
+>>>>>>> main
