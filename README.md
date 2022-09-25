@@ -4,6 +4,7 @@
 - Develop a RESTful API with FastAPI
 - Build a basic time series model to predict stock prices
 - Deploy a FastAPI to AWS EC2
+- Predict Nasdaq top 100 company, update model with CI.
 =======
 ## Run FASTAPI on local:
 uvicorn main:app --reload --workers 1 --host 0.0.0.0 --port 8000

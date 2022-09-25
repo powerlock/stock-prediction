@@ -30,7 +30,6 @@ def get_prediction(payload: StockIn):
         "forecast": convert(prediction_list)}
     return response_object
 
-<<<<<<< HEAD
 """ 
 from auto_run import *
 if __name__ == "__main__":
@@ -44,8 +43,3 @@ if __name__ == "__main__":
         print("change percentage: ", 100*val)
         if abs(val) > 0.15:
             print("****************5 percent more increase, High chance to invest*************") """
-=======
-#@app.get("/health", response_model=StockOut, status_code=200)
-#if __name__ == "__main__":
-#    uvicorn.run(app, host="0.0.0.0", port=8000)
->>>>>>> main
