@@ -1,4 +1,4 @@
-![![updateData](https://github.com/powerlock/stock-prediction/actions/workflows/updateData.yml/badge.svg)](https://github.com/powerlock/stock-prediction/actions/workflows/updateData.yml)
+![updateData](https://github.com/powerlock/stock-prediction/actions/workflows/updateData.yml/badge.svg)
 # Goal of this project
 
 - Develop a RESTful API with FastAPI
