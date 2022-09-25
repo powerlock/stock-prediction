@@ -1,7 +1,7 @@
 from pyexpat import model
-import schedule
+#import schedule
 from model import *
-import time
+#import time
 import pandas as pd
 def auto(stlist):
     #stlist = ['SQ','AZO','TSLA','MSFT','ROKU','NFLX','TXG','ENVX']
@@ -17,7 +17,7 @@ def auto(stlist):
         parser.add_argument('--days', type=int, default=7, help='Number of days to predict')
         args = parser.parse_args()
         train(args.ticker)
-        time.sleep(5)
+        #time.sleep(5)
 
 df = pd.read_csv(str(BASE_DIR)+'/data'+'Nasdaq_companylist.csv')
 stlist = df['Symbol'].iloc[0:100]
