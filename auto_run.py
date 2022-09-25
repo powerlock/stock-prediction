@@ -16,7 +16,7 @@ def auto(stlist):
         #time.sleep(5)
 file = 'nasdaq_screener_1664091848249.csv'
 df = pd.read_csv(str(BASE_DIR)+'/data'+'/'+file)
-stlist = df['Symbol'].iloc[0:100]
+stlist = df['Symbol'].iloc[0:300]
 auto(stlist)
 #schedule model update everyday midnight
 #schedule.every().day.at("00:00").do(auto)
