@@ -18,8 +18,8 @@ def auto(stlist):
         args = parser.parse_args()
         train(args.ticker)
         #time.sleep(5)
-
-df = pd.read_csv(str(BASE_DIR)+'/data'+'/Nasdaq_companylist.csv')
+file = 'nasdaq_screener_1664091848249.csv'
+df = pd.read_csv(str(BASE_DIR)+'/data'+'/file')
 stlist = df['Symbol'].iloc[0:100]
 auto(stlist)
 #schedule model update everyday midnight
