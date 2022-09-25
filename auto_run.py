@@ -4,11 +4,7 @@ from model import *
 #import time
 import pandas as pd
 def auto(stlist):
-    #stlist = ['SQ','AZO','TSLA','MSFT','ROKU','NFLX','TXG','ENVX']
-    #stlist = ['SQ','NFLX','TSLA']
-    #stlist = ['ADBE','ZM','COST','CRM']
-    #stlist = ['AI', 'NKLA','OXY','USO', 'XL']
-    #stlist = ['QQQ']
+
 
     for t in stlist:
 
