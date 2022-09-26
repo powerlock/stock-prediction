@@ -1,9 +1,9 @@
 name: updateData
 
 
-on: [push]
-  #schedule:
-   #- cron: '0 12 * * *' # runs at 12:00 UTC everyday
+on: #[push]
+  schedule:
+   - cron: '0 7 * * *' # runs at 7:00 am UTC, 12:00am PCT everyday
 
 jobs:
   build:
