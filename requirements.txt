@@ -59,3 +59,4 @@ uvicorn==0.18.2
 webargs==8.2.0
 yarl==1.7.2
 yfinance==0.1.74
+cmdstanpy
