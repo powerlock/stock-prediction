@@ -20,7 +20,7 @@ def pred(yesterday, stlist):
                 
                 val = (s - next(iter(output.values())))/s
                 if abs(val) > 0.15:
-                    invest.append(s)
+                    invest.append([t,s])
                     print("****************15 percent more change, High chance to invest*************")
                     print(s, t, val, output)
                     print("                                                    ")
