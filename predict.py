@@ -7,7 +7,7 @@ import argparse
 def pred(yesterday, stlist):
         invest = []
         for s,t in zip(yesterday,stlist):
-            print("Analyzing stock ", t)
+            print("Analyzing stock--: ", t)
             parser = argparse.ArgumentParser(description='predict')
             parser.add_argument('--ticker', type=str, default=t, help='Stock Ticker')
             parser.add_argument('--days', type=int, default=7, help='Number of days to predict')
