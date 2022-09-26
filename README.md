@@ -119,8 +119,8 @@ We will use [Prophet](https://facebook.github.io/prophet/) to predict stock mark
 
     Take note that the saved `MSFT.joblib` model along with two images
     <p align="center">
-    <img src="img/MSFT_plot.png" alt="drawing" width="400"/>
-    <img src="img/MSFT_plot_components.png" alt="drawing" width="240"/>
+    <img src="plots/MSFT_plot.png" alt="drawing" width="400"/>
+    <img src="plots/MSFT_plot_components.png" alt="drawing" width="240"/>
     </p>
 
 5. Push changes to repo once it is satified your criteria.
