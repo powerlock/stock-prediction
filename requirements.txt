@@ -1,9 +1,9 @@
-fastapi=0.79.0
-uvicorn= 0.18.2 
-pandas=1.4.3
-matplotlib=3.5.2
-yfinance 0.1.74
-pystan = 3.5.0
-prophet=1.1
-joblib = 1.1.0
+fastapi==0.79.0
+uvicorn==0.18.2 
+pandas==1.4.3
+matplotlib==3.5.2
+yfinance ==0.1.74
+pystan == 3.5.0
+prophet==1.1
+joblib == 1.1.0
 argparse

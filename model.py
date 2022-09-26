@@ -68,8 +68,8 @@ def convert(prediction_list):
         output[date] = data["trend"]
     return output
 
-if __name__ == "__main__":
-    prediction_list = predict(ticker='TSLA', days=7)
+#if __name__ == "__main__":
+ #   prediction_list = predict(ticker='TSLA', days=7)
     """stlist = ['SQ','AZO','TSLA','MSFT','ROKU','NFLX','TXG','ENVX']
     stlist = ['SQ','NFLX','TSLA']
     #stlist = ['ADBE','ZM','COST','CRM']
