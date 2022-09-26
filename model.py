@@ -31,11 +31,12 @@ def train(ticker="TSLA"):
 
     joblib.dump(model, Path(str(BASE_DIR)+'/model').joinpath(f"{ticker}.joblib"))
     update_data = df_forecast.y.iloc[-1]
-    filed_names = ['Symbol','Price']
+    field_names = ['Symbol','Price']
     dict_f = {'Symbol':ticker,"Price":update_data}
 
     with open(str(BASE_DIR)+'/data/current.csv', 'a') as csv_file:
-        writer = csv.DictWriter(csv_file, fieldnames=filed_names)
+        csv_file.f.truncate()
+        writer = csv.DictWriter(csv_file, fieldnames=field_names)
         writer.writerow(dict_f)
     csv_file.close()
     
@@ -70,11 +71,11 @@ def convert(prediction_list):
 
 #if __name__ == "__main__":
  #   prediction_list = predict(ticker='TSLA', days=7)
-    """stlist = ['SQ','AZO','TSLA','MSFT','ROKU','NFLX','TXG','ENVX']
-    stlist = ['SQ','NFLX','TSLA']
+    #stlist = ['SQ','AZO','TSLA','MSFT','ROKU','NFLX','TXG','ENVX']
+    #stlist = ['SQ','NFLX','TSLA']
     #stlist = ['ADBE','ZM','COST','CRM']
     #stlist = ['AI', 'NKLA','OXY','USO', 'XL']
-    #stlist = ['XL']
+"""     stlist = ['XL']
     for t in stlist:
 
         parser = argparse.ArgumentParser(description='Predict')
