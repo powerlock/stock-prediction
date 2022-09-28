@@ -35,9 +35,6 @@ def train(ticker="TSLA"):
     dict_f = {'Symbol':ticker,"Price":update_data}
 
     with open(str(BASE_DIR)+'/data/current.csv', 'a') as csv_file:
-        csv_file.truncate()
-        writer_row = csv.writer(csv_file)
-        writer_row.writerow(filed_names)
         writer = csv.DictWriter(csv_file, fieldnames=filed_names)
         writer.writerow(dict_f)
     csv_file.close()

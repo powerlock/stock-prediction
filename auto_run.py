@@ -17,6 +17,15 @@ def auto(stlist):
 file = 'nasdaq_screener_1664091848249.csv'
 df = pd.read_csv(str(BASE_DIR)+'/data'+'/'+file)
 stlist = df['Symbol'].iloc[0:300]
+
+# clear previous day's price in current.csv file
+filed_names = ['Symbol','Price']
+with open(str(BASE_DIR)+'/data/current.csv', 'a') as csv_file:
+    csv_file.truncate()
+    writer_row = csv.writer(csv_file)
+    writer_row.writerow(filed_names)
+csv_file.close()
+# train the model with new incoming data and save the yesterday's price in current csv file.
 auto(stlist)
 #schedule model update everyday midnight
 #schedule.every().day.at("00:00").do(auto)
