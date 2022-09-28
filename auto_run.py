@@ -25,6 +25,7 @@ with open(str(BASE_DIR)+'/data/current.csv', 'a') as csv_file:
     writer_row = csv.writer(csv_file)
     writer_row.writerow(filed_names)
 csv_file.close()
+print("previous data is deleted...")
 # train the model with new incoming data and save the yesterday's price in current csv file.
 auto(stlist)
 #schedule model update everyday midnight
