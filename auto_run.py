@@ -19,9 +19,11 @@ df = pd.read_csv(str(BASE_DIR)+'/data'+'/'+file)
 stlist = df['Symbol'].iloc[0:300]
 
 # clear previous day's price in current.csv file
-
+filed_names = ['Symbol','Price']
 csv_file = open(str(BASE_DIR)+'/data/current.csv', 'w')
 csv_file.truncate()
+writer_row = csv.writer(csv_file)
+writer_row.writerow(filed_names)
 csv_file.close()
 print("previous data is deleted...")
 # train the model with new incoming data and save the yesterday's price in current csv file.
