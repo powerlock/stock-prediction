@@ -1,7 +1,7 @@
 name: updateData
 
 
-on: [push]
+on: push
   #schedule:
    #- cron: '0 7 * * 3' # runs at 7:00 am UTC, 12:00am PCT everyday
 
