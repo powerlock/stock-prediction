@@ -1,4 +1,6 @@
 import datetime
+from datetime import datetime, timezone
+
 from pathlib import Path
 import csv
 import joblib
@@ -19,7 +21,7 @@ def train(ticker="TSLA"):
 
     df_forecast = data.copy()
     df_forecast.reset_index(inplace=True)
-    df_forecast["ds"] = df_forecast["Date"].replace(tzinfo=None)
+    df_forecast["ds"] = df_forecast["Date"].dt.tz_localize(None)
     df_forecast["y"] = df_forecast["Adj Close"]
     df_forecast = df_forecast[["ds", "y"]]
     
