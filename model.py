@@ -68,12 +68,12 @@ def convert(prediction_list):
         output[date] = data["trend"]
     return output
 
-""" if __name__ == "__main__":
-    stlist = ['SQ','AZO','TSLA','MSFT','ROKU','NFLX','TXG','ENVX']
-    stlist = ['SQ','NFLX','TSLA']
+if __name__ == "__main__":
+    #stlist = ['SQ','AZO','TSLA','MSFT','ROKU','NFLX','TXG','ENVX']
+    #stlist = ['SQ','NFLX','TSLA']
     #stlist = ['ADBE','ZM','COST','CRM']
     #stlist = ['AI', 'NKLA','OXY','USO', 'XL']
-    #stlist = ['XL']
+    stlist = ['AAPL']
     for t in stlist:
 
         parser = argparse.ArgumentParser(description='Predict')
@@ -89,7 +89,7 @@ def convert(prediction_list):
         val = (data.y.iloc[-1] - next(iter(output.values())))/data.y.iloc[-1]
         print("change percentage: ", 100*val)
         if abs(val) > 0.15:
-            print("****************5 percent more increase, High chance to invest*************") """
+            print("****************5 percent more increase, High chance to invest*************")
 
 
 

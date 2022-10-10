@@ -1,0 +1,23 @@
+version: "3"
+services:
+  graf:
+    image: grafana/grafana:7.5.3
+    ports:
+      - 3000:3000
+    volumes:
+      - ./metrics/provisioning:/etc/grafana/provisioning
+      - ./metrics/dashboards:/var/lib/grafana/dashboards
+  prom:
+    image: prom/prometheus:v2.26.0
+    ports:
+      - 9090:9090
+    volumes:
+      - ./metrics/prometheus.yml:/etc/prometheus/prometheus.yml
+  app:
+    build:
+      context: app
+    ports:
+      - 5000:5000
+    volumes:
+      - ../model/AAPL.joblib:/app/AAPL.joblib
+      - ./histogram.prom:/app/histogram.prom
