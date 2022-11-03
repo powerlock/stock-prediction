@@ -68,7 +68,7 @@ def convert(prediction_list):
         date = data["ds"].strftime("%m/%d/%Y")
         output[date] = data["trend"]
     return output
-
+"""
 if __name__ == "__main__":
     #stlist = ['SQ','AZO','TSLA','MSFT','ROKU','NFLX','TXG','ENVX']
     #stlist = ['SQ','NFLX','TSLA']
@@ -93,4 +93,4 @@ if __name__ == "__main__":
             print("****************5 percent more increase, High chance to invest*************")
 
 
-
+"""
