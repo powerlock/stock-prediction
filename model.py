@@ -16,7 +16,7 @@ TODAY = datetime.date.today()
 
 
 def train(ticker="TSLA"):
-    data = yf.download(ticker, "2020-07-01", TODAY.strftime("%Y-%m-%d"))
+    data = yf.download(ticker, "2019-03-01", TODAY.strftime("%Y-%m-%d"))
 
     df_forecast = data.copy()
     df_forecast.reset_index(inplace=True)
@@ -68,7 +68,7 @@ def convert(prediction_list):
         date = data["ds"].strftime("%m/%d/%Y")
         output[date] = data["trend"]
     return output
-
+"""
 if __name__ == "__main__":
     #stlist = ['SQ','AZO','TSLA','MSFT','ROKU','NFLX','TXG','ENVX']
     #stlist = ['SQ','NFLX','TSLA']
@@ -93,4 +93,4 @@ if __name__ == "__main__":
             print("****************5 percent more increase, High chance to invest*************")
 
 
-
+"""

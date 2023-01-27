@@ -17,7 +17,8 @@ uvicorn main:app --reload --workers 1 --host 0.0.0.0 --port 8000
 4. Do the prediction.
 
 ## Stock prediction and deployment on AWS
-
+# run the app with public access
+http://184.72.85.136:8000/docs
 
 
 # Stock Prophet 
