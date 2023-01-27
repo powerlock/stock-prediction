@@ -40,6 +40,10 @@ def get_prediction(payload: StockIn):
         "forecast": convert(prediction_list)}
     return response_object
 
+@app.get("/health", status_code=200)
+def health():
+    pass
+    return 
 """ 
 from auto_run import *
 if __name__ == "__main__":
