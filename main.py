@@ -3,6 +3,7 @@
 from fastapi import FastAPI, Query, HTTPException
 from pydantic import BaseModel
 from model import predict, convert
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
@@ -13,7 +14,16 @@ class StockIn(BaseModel):
 
 class StockOut(StockIn):
     forecast: dict
-
+origins = [
+    "http://localhost:3000",
+]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 @app.post("/predict", response_model=StockOut, status_code=200)
 def get_prediction(payload: StockIn):
     ticker = payload.ticker
