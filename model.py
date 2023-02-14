@@ -16,7 +16,7 @@ TODAY = datetime.date.today()
 
 
 def train(ticker="TSLA"):
-    data = yf.download(ticker, "2019-03-01", TODAY.strftime("%Y-%m-%d"))
+    data = yf.download(ticker, "2018-03-01", TODAY.strftime("%Y-%m-%d"))
 
     df_forecast = data.copy()
     df_forecast.reset_index(inplace=True)
